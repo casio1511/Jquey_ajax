@@ -14,7 +14,8 @@ $(document).ready(function () {
     }
 
     function moiTaoBranch(){
-        console.log("ahihi");
+        console.log("tao la admin")
+
     }
 
     //Thêm người dùng click function
