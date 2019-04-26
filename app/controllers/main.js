@@ -13,6 +13,9 @@ $(document).ready(function () {
 
     }
 
+    function moiTaoBranch(){
+        
+    }
 
     //Thêm người dùng click function
     $("#btnThemNguoiDung").click(function () {
