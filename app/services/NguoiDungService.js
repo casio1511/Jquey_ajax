@@ -25,6 +25,26 @@ function NguoiDungService (){
         //thêm người dùng
       
     }
+    //2604
+    this.layThongTinNguoiDung = function (taiKhoan){
+       var danhSachNguoiDung = JSON.parse(localStorage.getItem("danhSachNguoiDung"));
+        danhSachNguoiDung.map(function(item,index){
+            if (item.taiKhoan== taiKhoan)
+            {
+                return index;
+            }
+        })
+    }
+
+    //Lay thẳng thông tin người dùng ko cần vị trí
+    this.layDanhSachNguoiDung2= function (taikhoan){
+        var danhSachNguoiDung = JSON.parse(localStorage.getItem("danhSachNguoiDung"));
+       return danhSachNguoiDung.find(function(item){
+            return item.TaiKhoan === taiKhoan;
+        })
+    }
+
+
     this.themNguoiDung = function(nguoiDung){
         return $.ajax({
              url:"http://svcy.myclass.vn/api/QuanLyTrungTam/ThemNguoiDung",

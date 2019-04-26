@@ -51,6 +51,31 @@ $(document).ready(function () {
     //     console("taiKhoan",taiKhoan);
 
     // })
+    $("body").delegate(".btnSua","click",function(){
+        var taiKhoan= $(this).data('taikhoan');
+        // var viTri = nguoiDungService.layDanhSachNguoiDung(taiKhoan);
+        // var danhSachNguoiDung= JSON.parse(localStorage.get("danhSachNguoiDung"));
+        
+        //cách 2 - ko tìm vị trí mà tìm thẳng thằng cần tìm
+
+        var nguoiDung = nguoiDungService.layDanhSachNguoiDung2(taiKhoan);
+        console.log("người dùng" + nguoiDung);
+
+        $('#TaiKhoan').val(taiKhoan);
+        $('#HoTen').val(nguoiDung.HoTen);
+        $('#MatKhau').val(nguoiDung.MatKhau);
+        $('#Email').val(nguoiDung.Email);
+        $('#SoDienThoai').val(nguoiDung.SoDT);
+
+
+        //console.log(viTri);
+        // $('#TaiKhoan').val(taiKhoan);
+        // $('#HoTen').val(danhSachNguoiDung[vitri].HoTen);
+        // $('#MatKhau').val(danhSachNguoiDung[vitri].MatKhau);
+        // $('#Email').val(danhSachNguoiDung[vitri].Email);
+        // $('#SoDienThoai').val(danhSachNguoiDung[vitri].SoDT);
+    })
+
     $("body").delegate("#btnThem","click", function(){
         var taiKhoan= $('#TaiKhoan').val();
         var hoTen= $('#HoTen').val();
