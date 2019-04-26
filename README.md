@@ -1,1 +1,0 @@
-# Jquey_ajax
