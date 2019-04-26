@@ -14,7 +14,7 @@ $(document).ready(function () {
     }
 
     function moiTaoBranch(){
-        
+        console.log("ahihi");
     }
 
     //Thêm người dùng click function
