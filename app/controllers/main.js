@@ -15,7 +15,9 @@ $(document).ready(function () {
 
     function moiTaoBranch(){
         console.log("local ahihi");
+        console.log("Test mới");
     }
+    
 
     //Thêm người dùng click function
     $("#btnThemNguoiDung").click(function () {
